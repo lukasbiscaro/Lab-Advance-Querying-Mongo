@@ -39,7 +39,7 @@ Query: {category_code:null}
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
-Query: {number_of_employees: {$gt: 100, $lt: 1000}}
+Query: {number_of_employees: {$gte: 100, $lt: 1000}}
 Project: {_id: 0, name: 1, number_of_employees: 1}
 
 ### 9. Order all the companies by their IPO price in a descending order.
@@ -84,7 +84,7 @@ Sort: {number_of_employees: 1}
 
 ### 17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
 
-Query: {"acquisition.price_amount": {$gt: 10000000}, "acquisition.price_currency_code": 'EUR'
+Query: {"acquisition.price_amount": {$gt: 10000000}, "acquisition.price_currency_code": 'EUR'}
 
 ### 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
 
